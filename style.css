@@ -1,15 +1,17 @@
-/* Styles généraux */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff); /* Dégradé de fond */
+    color: #333;
 }
 
+/* Header */
 header {
-    background-color: #333;
+    background-color: #1e3c72; /* Couleur plus élégante pour le header */
     color: white;
     padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée pour donner du relief */
 }
 
 .container {
@@ -19,7 +21,8 @@ header {
 }
 
 .logo img {
-    height: 50px;
+    height: 40px; /* Taille réduite du logo */
+    width: auto;
 }
 
 nav ul {
@@ -30,12 +33,18 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out; /* Animation sur le survol */
+}
+
+nav ul li a:hover {
+    color: #ffb300; /* Couleur au survol */
 }
 
 /* Main */
@@ -48,16 +57,27 @@ main {
     margin-bottom: 40px;
 }
 
+/* Hero section */
 .hero {
-    background-color: #e3f2fd;
-    padding: 40px;
+    background-color: rgba(225, 242, 253, 0.8); /* Arrière-plan légèrement transparent */
+    padding: 60px 20px;
     text-align: center;
+    border-radius: 10px; /* Bordures arrondies */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre portée */
 }
 
-h2 {
+.hero h2 {
+    color: #1e3c72;
+    font-size: 2.5rem;
+}
+
+.hero p {
     color: #333;
+    font-size: 1.2rem;
+    margin-top: 10px;
 }
 
+/* Parcours section */
 .parcours-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -66,26 +86,69 @@ h2 {
 
 .parcours {
     background-color: white;
-    border: 1px solid #ccc;
-    padding: 15px;
+    border: 1px solid #ddd;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Bordures arrondies pour les parcours */
+    transition: transform 0.3s ease-in-out; /* Effet au survol */
+}
+
+.parcours:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
 }
 
 .parcours img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
+.parcours p {
+    color: #1e3c72;
+    font-size: 1.1rem;
+    margin-top: 10px;
 }
 
-/* Formulaire */
+.parcours a {
+    text-decoration: none;
+    color: inherit; /* Supprimer la couleur par défaut du lien */
+}
+
+/* Section À propos */
+#about {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#about h2 {
+    color: #1e3c72;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Section Contact */
+#contact {
+    background-color: #e3f2fd;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    color: #1e3c72;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -96,39 +159,56 @@ form {
 
 form label {
     margin-top: 10px;
+    font-weight: bold;
+    color: #1e3c72;
 }
 
 form input, form textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
 }
 
 form button {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #333;
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #1e3c72;
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
 }
 
 form button:hover {
-    background-color: #555;
+    background-color: #ffb300; /* Changer la couleur du bouton au survol */
+}
+
+footer {
+    background-color: #1e3c72;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
     nav ul {
         text-align: center;
+        padding: 0;
     }
 
     .parcours-grid {
         grid-template-columns: 1fr;
     }
-}
 
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
 
   
