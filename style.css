@@ -26,8 +26,8 @@ header {
 }
 
 .logo img {
-    max-width: 150px; /* Taille maximale du logo */
-    height: auto;     /* Maintien des proportions */
+    height: 40px;
+    width: auto;
 }
 
 nav ul {
@@ -222,6 +222,7 @@ footer {
         padding: 20px;
     }
 }
+
 
 
   
