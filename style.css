@@ -1,159 +1,91 @@
-/* Global styles */
+/* Styles généraux */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #e3f2fd, #ffffff); /* Dégradé de fond */
-    color: #333;
-    text-align: center; /* Centrer le texte par défaut */
+    background-color: #f4f4f4;
 }
 
-/* Centering content container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: left; /* Retourner à gauche pour les sections avec plus d'espace */
-}
-
-/* Header */
 header {
-    background-color: #1e3c72;
+    background-color: #333;
     color: white;
     padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
-logo img {
-    width: 150px;  /* Largeur fixe */
-    height: 100px; /* Hauteur fixe */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 nav ul li {
-    display: inline-block;
-    margin: 0 20px;
+    display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
 }
 
-nav ul li a:hover {
-    color: #ffb300;
-}
-
-/* Main content */
+/* Main */
 main {
-    padding: 40px 20px;
+    padding: 20px;
 }
 
-/* Hero section */
+/* Section */
+.section {
+    margin-bottom: 40px;
+}
+
 .hero {
-    background-color: rgba(225, 242, 253, 0.8);
-    padding: 60px 20px;
+    background-color: #e3f2fd;
+    padding: 40px;
     text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.hero h2 {
-    color: #1e3c72;
-    font-size: 2.5rem;
-}
-
-.hero p {
+h2 {
     color: #333;
-    font-size: 1.2rem;
-    margin-top: 10px;
 }
 
-/* Section for parcours */
 .parcours-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 .parcours {
     background-color: white;
-    border: 1px solid #ddd;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.parcours:hover {
-    transform: scale(1.05);
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .parcours img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
-.parcours p {
-    color: #1e3c72;
-    font-size: 1.1rem;
-    margin-top: 10px;
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
 
-.parcours a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* About section */
-#about {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
-}
-
-#about h2 {
-    color: #1e3c72;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-#about p {
-    color: #333;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* Contact section */
-#contact {
-    background-color: #e3f2fd;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
-}
-
-#contact h2 {
-    color: #1e3c72;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
+/* Formulaire */
 form {
     display: flex;
     flex-direction: column;
@@ -164,40 +96,27 @@ form {
 
 form label {
     margin-top: 10px;
-    font-weight: bold;
-    color: #1e3c72;
 }
 
 form input, form textarea {
-    padding: 12px;
-    margin-top: 8px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 1rem;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 form button {
-    margin-top: 15px;
-    padding: 12px;
-    background-color: #1e3c72;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #333;
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 6px;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
+    border-radius: 4px;
 }
 
 form button:hover {
-    background-color: #ffb300;
-}
-
-footer {
-    background-color: #1e3c72;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 1rem;
+    background-color: #555;
 }
 
 /* Responsive design */
@@ -209,20 +128,7 @@ footer {
     .parcours-grid {
         grid-template-columns: 1fr;
     }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    #about, #contact {
-        padding: 20px;
-    }
-
-    form {
-        padding: 20px;
-    }
 }
-
 
 
   
