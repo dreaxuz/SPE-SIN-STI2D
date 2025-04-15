@@ -1,39 +1,44 @@
-/* Styles généraux */
+/* Global styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #e3f2fd, #ffffff); /* Dégradé de fond */
     color: #333;
+    text-align: center; /* Centrer le texte par défaut */
+}
+
+/* Centering content container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left; /* Retourner à gauche pour les sections avec plus d'espace */
 }
 
 /* Header */
 header {
-    background-color: #1e3c72; /* Couleur plus élégante pour le header */
+    background-color: #1e3c72;
     color: white;
     padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée pour donner du relief */
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .logo img {
-    height: 40px; /* Taille réduite du logo */
-    width: auto;
+    max-width: 150px; /* Taille maximale du logo */
+    height: auto;     /* Maintien des proportions */
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 20px;
 }
 
@@ -41,30 +46,25 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease-in-out; /* Animation sur le survol */
+    transition: color 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #ffb300; /* Couleur au survol */
+    color: #ffb300;
 }
 
-/* Main */
+/* Main content */
 main {
-    padding: 20px;
-}
-
-/* Section */
-.section {
-    margin-bottom: 40px;
+    padding: 40px 20px;
 }
 
 /* Hero section */
 .hero {
-    background-color: rgba(225, 242, 253, 0.8); /* Arrière-plan légèrement transparent */
+    background-color: rgba(225, 242, 253, 0.8);
     padding: 60px 20px;
     text-align: center;
-    border-radius: 10px; /* Bordures arrondies */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .hero h2 {
@@ -78,21 +78,150 @@ main {
     margin-top: 10px;
 }
 
-/* Parcours section */
+/* Section for parcours */
 .parcours-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .parcours {
     background-color: white;
     border: 1px solid #ddd;
     padding: 20px;
-    text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px; /* Bordures arrondies pour les parcours */
-    transition: transform 0.3s ease-in-out; /* Effet au survol */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.par
+.parcours:hover {
+    transform: scale(1.05);
+}
+
+.parcours img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.parcours p {
+    color: #1e3c72;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.parcours a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* About section */
+#about {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+#about h2 {
+    color: #1e3c72;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Contact section */
+#contact {
+    background-color: #e3f2fd;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+#contact h2 {
+    color: #1e3c72;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+form label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #1e3c72;
+}
+
+form input, form textarea {
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #1e3c72;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ffb300;
+}
+
+footer {
+    background-color: #1e3c72;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    .parcours-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    #about, #contact {
+        padding: 20px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
+
+
+  
