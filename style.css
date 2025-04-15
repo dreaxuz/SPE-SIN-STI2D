@@ -25,9 +25,9 @@ header {
     text-align: center;
 }
 
-.logo img {
-    height: 40px;
-    width: auto;
+logo img {
+    width: 150px;  /* Largeur fixe */
+    height: 100px; /* Hauteur fixe */
 }
 
 nav ul {
