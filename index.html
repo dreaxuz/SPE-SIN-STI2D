@@ -1,36 +1,87 @@
-/* Global styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #e3f2fd, #ffffff); /* Dégradé de fond */
-    color: #333;
-    text-align: center; /* Centrer le texte par défaut */
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpéSin</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="SpéSin Logo" class="logo-image">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#parcours">Parcours</a></li>
+                    <li><a href="#about">À Propos</a></li>
+                    <li><a href="#contact">Contact</a></li>  
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-/* Centering content container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: left; /* Retourner à gauche pour les sections avec plus d'espace */
-}
+    <main>
+        <!-- Section Accueil -->
+        <section id="home" class="section">
+            <div class="hero">
+                <h2>Bienvenue chez SpéSin</h2>
+                <p>Explorez la spécialité Systèmes d'Information et Numérique (SIN) pour vous immerger dans les métiers du numérique et de l'informatique.</p>
+            </div>
+        </section>
 
-/* Header */
-header {
-    background-color: #1e3c72;
-    color: white;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+        <!-- Section Parcours -->
+        <section id="parcours" class="section">
+            <h2>Les différents parcours</h2>
+            <div class="parcours-grid">
+                <div class="parcours">
+                    <a href="https://www.onisep.fr/ressources/univers-formation/formations/post-bac/but-informatique-parcours-realisation-d-applications-conception-developpement-validation" target="_blank">
+                        <img src="https://yt3.googleusercontent.com/xTe_JZ9MGButzL-omLCCefu1Iqj_nF0Qn6CcrdYI0z5O68M50RJT4EWdDdBjGQWiL27UFLVayA=s900-c-k-c0x00ffffff-no-rj" alt="Parcours Informatique">
+                        <p>BUT Informatique - Réalisation d'Applications</p>
+                        <p>Explorez un parcours en développement d'applications, où vous apprendrez à concevoir et valider des applications logicielles.</p>
+                    </a>
+                </div>
+                <div class="parcours">
+                    <a href="https://www.onisep.fr/ressources/univers-formation/formations/post-bac/but-informatique-parcours-gestion-de-projets" target="_blank">
+                        <img src="https://www.onisep.fr/uploads/2019/02/but_informatique_gestion_projets.png" alt="Parcours Gestion de Projets">
+                        <p>BUT Informatique - Gestion de Projets</p>
+                        <p>Ce parcours est idéal pour ceux qui souhaitent se spécialiser dans la gestion de projets informatiques et l'encadrement d'équipes techniques.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-.logo img {
-    height: 40px;
-    width: auto;
-}
+        <!-- Section À propos -->
+        <section id="about" class="section">
+            <h2>À Propos de la Spécialité SIN</h2>
+            <p>La spécialité SIN (Systèmes d'Information et Numérique) permet aux étudiants d’acquérir des compétences pratiques et théoriques dans des domaines clés comme la programmation, les réseaux, et l'architecture des systèmes. Les élèves sont formés pour devenir des experts dans l’utilisation des outils numériques et des systèmes d'information en entreprise.</p>
+            <p>Ce programme offre une perspective variée de l'informatique et prépare les étudiants à des carrières dans de nombreux secteurs comme le développement logiciel, la cybersécurité, et le management de projets numériques.</p>
+        </section>
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+        <!-- Section Contact -->
+        <section id="contact" class="section">
+            <h2>Contactez-nous</h2>
+            <form>
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SpéSin - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
+
