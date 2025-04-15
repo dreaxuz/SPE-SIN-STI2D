@@ -2,212 +2,134 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #e3f2fd, #ffffff); /* Dégradé de fond */
-    color: #333;
+    background-color: #f4f7fa; /* Couleur de fond douce */
+    color: #333; /* Texte sombre */
+    text-align: center; /* Centrer le texte par défaut */
+}
+
+/* Centering content container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
 }
 
 /* Header */
 header {
-    background-color: #1e3c72; /* Couleur plus élégante pour le header */
+    background-color: #3498db; /* Bleu clair */
     color: white;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée pour donner du relief */
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header .logo img {
+    height: 50px;
+    width: auto;
 }
 
-.logo img {
-    width: 150px;  /* Largeur fixe */
-    height: 100px; /* Hauteur fixe */
-}
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease-in-out; /* Animation sur le survol */
+    font-size: 1.2rem;
 }
 
 nav ul li a:hover {
-    color: #ffb300; /* Couleur au survol */
+    text-decoration: underline;
 }
 
-/* Main */
-main {
-    padding: 20px;
-}
-
-/* Section */
-.section {
-    margin-bottom: 40px;
-}
-
-/* Hero section */
+/* Hero Section */
 .hero {
-    background-color: rgba(225, 242, 253, 0.8); /* Arrière-plan légèrement transparent */
-    padding: 60px 20px;
-    text-align: center;
-    border-radius: 10px; /* Bordures arrondies */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre portée */
+    background: linear-gradient(135deg, #6ab7ff, #3498db); /* Dégradé de fond */
+    color: white;
+    padding: 80px 20px;
 }
 
 .hero h2 {
-    color: #1e3c72;
     font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    color: #333;
     font-size: 1.2rem;
-    margin-top: 10px;
 }
 
-/* Parcours section */
+/* Sections */
+.section {
+    padding: 60px 20px;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 30px;
+}
+
+.section p {
+    font-size: 1rem;
+    color: #555;
+}
+
 .parcours-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
 
 .parcours {
     background-color: white;
-    border: 1px solid #ddd;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px; /* Bordures arrondies pour les parcours */
-    transition: transform 0.3s ease-in-out; /* Effet au survol */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
 }
 
 .parcours:hover {
-    transform: scale(1.05); /* Effet de zoom au survol */
+    transform: scale(1.05);
 }
 
 .parcours img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.parcours p {
-    color: #1e3c72;
-    font-size: 1.1rem;
-    margin-top: 10px;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #3498db;
 }
 
 .parcours a {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    color: #3498db;
     text-decoration: none;
-    color: inherit; /* Supprimer la couleur par défaut du lien */
-}
-
-/* Section À propos */
-#about {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-#about h2 {
-    color: #1e3c72;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-#about p {
-    color: #333;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* Section Contact */
-#contact {
-    background-color: #e3f2fd;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-#contact h2 {
-    color: #1e3c72;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
-}
-
-form label {
-    margin-top: 10px;
     font-weight: bold;
-    color: #1e3c72;
 }
 
-form input, form textarea {
-    padding: 12px;
-    margin-top: 8px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 1rem;
+.parcours a:hover {
+    background-color: #f4f7fa;
 }
 
-form button {
-    margin-top: 15px;
-    padding: 12px;
-    background-color: #1e3c72;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 6px;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
-}
-
-form button:hover {
-    background-color: #ffb300; /* Changer la couleur du bouton au survol */
-}
-
+/* Footer */
 footer {
-    background-color: #1e3c72;
+    background-color: #2c3e50; /* Bleu foncé */
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
+}
+
+footer p {
     font-size: 1rem;
 }
-
-/* Responsive design */
-@media (max-width: 768px) {
-    nav ul {
-        text-align: center;
-        padding: 0;
-    }
-
-    .parcours-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-}
-
-  
